@@ -10,6 +10,7 @@ function RightOrWrongAnswerCreator () {
 		} else { 
 			answerLine.innerHTML = "Wrong!" ;
 		}
+		input.value="";
 		var number1_int = Math.floor(getRandomInt(1,100)) ;
 		var number2_int = Math.floor(getRandomInt(1,100)) ;
 		getRandomExercise(number1_int,number2_int);
