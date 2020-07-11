@@ -32,7 +32,7 @@ function submitAnswerAfterEnterPress() {
 
 // Randomizing the Exrecise 
 function getRandomExercise (number1_int,number2_int) {
-	operation=getRandomInt(1,4) ;
+	operation=getRandomInt(1,5) ;
 
 	if (operation===2){
 		while (number1_int<number2_int) {
@@ -40,29 +40,38 @@ function getRandomExercise (number1_int,number2_int) {
 		}
 	}
 
+	if (operation===4) {
+		number3_int=number2_int*number1_int;
+		number3_str=number3_int.toString();
+
+	}
+
 	number1_str=number1_int.toString();
 	number2_str=number2_int.toString();
-
+	exercise = document.getElementById("exercise");
 
 	if (operation===1) {
 		operation="+";
-		result=number1_int+number2_int ; 
+		result=number1_int+number2_int ;
+		exercise.innerHTML=number1_str.concat(operation).concat(number2_str); 
 	}
 	if (operation===2) {
 		operation="-";
 		result=number1_int-number2_int ;
+		exercise.innerHTML=number1_str.concat(operation).concat(number2_str); 
 	}
 	if (operation===3) {
 		operation="*";
 		result=number1_int*number2_int ;
+		exercise.innerHTML=number1_str.concat(operation).concat(number2_str); 
 	}
 	if (operation===4) {
 		operation="/";
-		result=number1_int/number2_int ;
+		result=number3_int/number1_int ;
+		exercise.innerHTML=number3_str.concat(operation).concat(number1_str); 
 	}
 
-	exercise = document.getElementById("exercise");
-	exercise.innerHTML=number1_str.concat(operation).concat(number2_str);
+
 
 }
 
@@ -74,6 +83,7 @@ body.appendChild(answerLine) ;
 
 var number1_int = Math.floor(getRandomInt(1,100)) ;
 var number2_int = Math.floor(getRandomInt(1,100)) ;
+var number3_int ;
 getRandomExercise(number1_int,number2_int);
 
 button.addEventListener("click", submitAnswerAfterClick)
