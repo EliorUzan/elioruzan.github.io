@@ -45,7 +45,7 @@ a {
 @media only screen and (max-width: 600px) { 
     #exercise, #goodLuck {
         font-size: 0.5em ;
-        padding: 0;
+        padding-top: : 2px;
      }
     }
 
