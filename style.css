@@ -36,21 +36,40 @@ a {
     text-decoration: none;
      }
 
+
+
+
+
+
+/*COVER*/
 #exercise, #goodLuck {
     align-items: center;
     text-align: center; 
  
 }
 
+@media only screen and (max-width: 800px) { 
+    #resultsTable {
+        font-size: 0.7em ;
+        padding-top: : 2px;
+     }
+    }
+
 @media only screen and (max-width: 600px) { 
-    #exercise, #goodLuck {
+    #exercise, #goodLuck , #resultsTable {
         font-size: 0.5em ;
         padding-top: : 2px;
      }
     }
 
+.resultsTable_HeadersRow th { 
+    padding-right: 20px ;
+    
 
-/*COVER*/
+
+}
+
+
 .red_container { 
     text-align: center;
     display:flex; 
@@ -62,6 +81,11 @@ a {
 .exercise_block {
     display: inline-block;
     align-items: center ;
+}
+
+.resultsTable_HeadersRow {
+    text-align: left;
+    border: 1px solid white;
 }
 
 .btn {

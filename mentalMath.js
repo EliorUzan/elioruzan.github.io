@@ -5,6 +5,7 @@ function session() {
 			exerciseBlock.removeChild(input);
 			exerciseBlock.removeChild(button) ;  
 			exerciseBlock.removeChild(answerLine) ; 
+			summaryPage(questionsAndResults);
 	}
 
 
@@ -15,19 +16,24 @@ function session() {
 	} 
 
 	function RightOrWrongAnswerCreator () {
-			// questionSummary.ans = input.value ; 
+			questionsAndResults[i] = Object.assign({},questionSummary); 
 			if (input.value<=result*1.05 && input.value>=result*0.95) {
 				answerLine.textContent = "Correct!" ;
-				// questionSummary.CorrectOrWrong = "Correct"; 
+				questionSummary.CorrectOrWrong = "Correct"; 
 			} else { 
 				answerLine.textContent = "Wrong!" ;
-				// questionSummary.CorrectOrWrong = "Wrong" ; 
+				questionSummary.CorrectOrWrong = "Wrong" ; 
 			}
-			// console.log(questionSummary); 
-			// questionsAndResults.push(questionSummary) ; 
+			questionsAndResults[i].n1=parseInt(number1_str);
+			questionsAndResults[i].n2=parseInt(number2_str);
+			questionsAndResults[i].op = operation
+			questionsAndResults[i].ans = input.value;
+			questionsAndResults[i].res = result ;
+			questionsAndResults[i].CorrectOrWrong = answerLine.textContent;
 			input.value="";
-			var number1_int = Math.floor(getRandomInt(1,100)) ;
-			var number2_int = Math.floor(getRandomInt(1,100)) ;
+			number1_int = Math.floor(getRandomInt(1,100)) ;
+			number2_int = Math.floor(getRandomInt(1,100)) ;
+			i=i+1;
 			getRandomExercise(number1_int,number2_int); // The end of the process - A new exercise is being generated 
 
 		}
@@ -49,7 +55,6 @@ function session() {
 
 	function getRandomExercise (number1_int,number2_int) {
 		operation=getRandomInt(1,5) ;
-
 		number1_str=number1_int.toString();
 		number2_str=number2_int.toString();
 		exercise = document.getElementById("exercise");
@@ -69,7 +74,7 @@ function session() {
 				operation="-";
 				result=number1_int-number2_int ;
 				number2_str=number2_int.toString(); //re-defining number2_str because it might have changed due to the "while" loop
-				exercise.innerHTML=number1_str+operation+number2_str;  
+				exercise.innerHTML=number1_str+operation+number2_str; 
 				break ;
 			
 			case 3:
@@ -79,14 +84,12 @@ function session() {
 				break ;
 			
 			case 4:
-				number2_int=number2_int*number1_int; // In order to get only integers a exercise results, we multiply n1*n2=n3 to get n3 and than divide n3/n1=n2 to get n2 as the answer
-				number2_str=number2_int.toString();
+				number1_int=number2_int*number1_int; // In order to get only integers a exercise results, we multiply n1*n2=n3 to get n3 and than divide n3/n1=n2 to get n2 as the answer
+				number1_str=number1_int.toString();
 				operation="/";
-				result=number2_int/number1_int ;
-				exercise.innerHTML=number2_str+operation+number1_str; 
+				result=number1_int/number2_int ;
+				exercise.innerHTML=number1_str+operation+number2_str; 
 				break ;
-		// questionSummary.op = operation ; 
-		// questionSummary.res = result ; 
 		}
 	}
 
@@ -106,9 +109,7 @@ function session() {
 	exerciseBlock.appendChild(answerLine) ;
 
 	var number1_int = Math.floor(getRandomInt(1,100)) ;
-	// questionSummary.n1 = number1_int ;
 	var number2_int = Math.floor(getRandomInt(1,100)) ;
-	// questionSummary.n2 = number2_int ;
 	getRandomExercise(number1_int,number2_int); // Generates a random exercise 
 
 	button.addEventListener("click", submitAnswerAfterClick) //upon click - submit
@@ -123,12 +124,13 @@ var goodLuck = document.getElementById("goodLuck") ;
 var exerciseBlock = document.getElementsByClassName("exercise_block")[0];
 startSession=document.getElementById("StartSession") ;
 startSession.addEventListener("click",session); 
-// var questionsAndResults =[] ;
-// var questionSummary = {
-// 	n1: 0,
-// 	n2: 0, 
-// 	op: "+",
-// 	ans: 0, 
-// 	res: 0, 
-// 	CorrectOrWrong: "Correct"
-// }
+var questionsAndResults =[] ;
+var questionSummary = {
+	n1: 0,
+	n2: 0, 
+	op: "+",
+	ans: 0, 
+	res: 0, 
+	CorrectOrWrong: "Correct"
+}; 
+let i=0; 
