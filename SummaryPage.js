@@ -1,4 +1,11 @@
 function summaryPage(QandR) {
+
+
+	function redirect(address) {
+		window.location.href = address;
+	}
+
+
 	let i;
 	let resultsTableHTML = `
 	<table id="resultsTable">
@@ -16,7 +23,7 @@ function summaryPage(QandR) {
 	let currentDistanceFromExactAnswer ;
 	for (i = 0; i < QandR.length; i++) {
 		currentExercise_str=QandR[i].n1+QandR[i].op+QandR[i].n2;
-		currentDistanceFromExactAnswer = Math.round((1-(Math.min(QandR[i].ans,QandR[i].res)/Math.max(QandR[i].ans,QandR[i].res)))*100) ;
+		currentDistanceFromExactAnswer = Math.round((Math.abs(QandR[i].ans-QandR[i].res)/QandR[i].res)*100) ;
 		resultsTableHTML=resultsTableHTML+'\n'+`
 			<tr class="resultsTable_dataRow">
 				<td>${currentExercise_str}</td>
@@ -31,8 +38,14 @@ function summaryPage(QandR) {
 
 	exercise_block.innerHTML = exercise_block.innerHTML+'\n'+`
 	</table>`; 
-	exercise_block.innerHTML = resultsTableHTML;  
-
+	exercise_block.innerHTML = resultsTableHTML; 
+	tryAgainButton = document.createElement("button") 
+	tryAgainButton.textContent = 'Try Again';
+	tryAgainButton.classList.add("btn");
+	tryAgainButton.classList.add("btn-success");
+	tryAgainButton.id = "tryAgainButton";
+	tryAgainButton.setAttribute('onclick', 'window.location.href = "https://elioruzan.github.io/";') ; 
+	exercise_block.appendChild(tryAgainButton); 
 
 
 }

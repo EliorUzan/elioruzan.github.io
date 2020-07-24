@@ -24,8 +24,8 @@ function session() {
 				answerLine.textContent = "Wrong!" ;
 				questionSummary.CorrectOrWrong = "Wrong" ; 
 			}
-			questionsAndResults[i].n1=parseInt(number1_str);
-			questionsAndResults[i].n2=parseInt(number2_str);
+			questionsAndResults[i].n1=number1_str;
+			questionsAndResults[i].n2=number2_str;
 			questionsAndResults[i].op = operation
 			questionsAndResults[i].ans = input.value;
 			questionsAndResults[i].res = result ;
@@ -78,7 +78,7 @@ function session() {
 				break ;
 			
 			case 3:
-				operation="*";
+				operation="×";
 				result=number1_int*number2_int ;
 				exercise.innerHTML=number1_str+operation+number2_str; 
 				break ;
@@ -86,7 +86,7 @@ function session() {
 			case 4:
 				number1_int=number2_int*number1_int; // In order to get only integers a exercise results, we multiply n1*n2=n3 to get n3 and than divide n3/n1=n2 to get n2 as the answer
 				number1_str=number1_int.toString();
-				operation="/";
+				operation="÷";
 				result=number1_int/number2_int ;
 				exercise.innerHTML=number1_str+operation+number2_str; 
 				break ;

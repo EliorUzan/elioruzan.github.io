@@ -64,6 +64,7 @@ a {
 
 .resultsTable_HeadersRow th { 
     padding-right: 20px ;
+    text-align:center;
     
 
 
@@ -71,16 +72,20 @@ a {
 
 
 .red_container { 
+    padding-top:100px;
+    padding-bottom: 30px;
     text-align: center;
+    flex-direction: row ;
     display:flex; 
     align-items: center ;
     justify-content: center ;
-    height: 50vh /* Means the the cover will be 50% of the viewport */
+    min-height: 50vh /* Means the the cover will be 50% of the viewport */
      }
 
 .exercise_block {
     display: inline-block;
     align-items: center ;
+    /*word-wrap: break-word;*/
 }
 
 .resultsTable_HeadersRow {
