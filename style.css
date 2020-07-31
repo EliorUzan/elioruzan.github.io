@@ -110,7 +110,8 @@ a:hover {
 }
 
 #landingLogo {
-    max-width: 100%;
+    max-width: 75vh;
+    max-width: 74vw;
 }
 
 .exercise_block {
