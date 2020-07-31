@@ -11,17 +11,20 @@
 </head>
 <body>
 
-  <nav class="zone green sticky">
+  <nav id="navBar" class="zone green sticky">
   	<ul class="main-nav">
-  		<li><a href="">Whats Mental Math?</a></li>
-  		<li><a href="">About</a></li>
-  		<li><a href="">Our Team</a></li>
-  		<li class="push"><a href="">Contact</a></li>
+  		<li id="navLogo"><img src="cover.png" width="180.898" height="143.398"></li>	
+  		<li class="navBtn"><a href="#exercise_block">Mental Math Session</a></li>
+  		<li class="navBtn"><a href="">About</a></li>
+  		<li class="navBtn"><a href="">Our Team</a></li>
+  		<li class="navBtn push"><a href="">Contact</a></li>
   	</ul>
   </nav>
-  <div class="red_container zone red">
+  <div class="zone red_container red" data-spy="scroll" data-target="#navBar" data-offset="0">
 
-
+  	<div id="logoMainContainer">
+  		<img src="default_cut.png">
+  	</div>
 
   	<div class="exercise_block" id="exercise_block">
 	  	<h1 id="exercise">Hi, Upon a click you will start your 3 minutes session of Mental Math</h1>
@@ -29,13 +32,12 @@
 	  	<button id="StartSession" class="btn btn-success">START</button>
   	</div>
 	
-
   </div>
   <div class="zone blue grid-wrapper">
-  	<div class="box zone"><img src="./img/files_2.png"></div>
+<!--   	<div class="box zone"><img src="./img/files_2.png"></div>
   	<div class="box zone"><img src="./img/server_2_2.png"></div>
   	<div class="box zone"><img src="./img/monitor_settings_2.png"></div>
-  	<div class="box zone"><img src="./img/server_3.png"></div>
+  	<div class="box zone"><img src="./img/server_3.png"></div> -->
   </div>
   <footer class="zone yellow">Footer</footer>
   <script type="text/javascript" src="SummaryPage.js"></script>

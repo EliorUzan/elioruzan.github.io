@@ -1,11 +1,5 @@
 function summaryPage(QandR) {
 
-
-	function redirect(address) {
-		window.location.href = address;
-	}
-
-
 	let i;
 	let resultsTableHTML = `
 	<table id="resultsTable">
@@ -44,7 +38,7 @@ function summaryPage(QandR) {
 	tryAgainButton.classList.add("btn");
 	tryAgainButton.classList.add("btn-success");
 	tryAgainButton.id = "tryAgainButton";
-	tryAgainButton.setAttribute('onclick', 'window.location.href = "https://elioruzan.github.io/";') ; 
+	tryAgainButton.setAttribute('onclick', 'window.location.href = "https://elioruzan.github.io/#exercise_block";') ; 
 	exercise_block.appendChild(tryAgainButton); 
 
 
