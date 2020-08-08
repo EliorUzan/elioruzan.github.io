@@ -102,6 +102,7 @@ function session() {
 	input.setAttribute("type", "text"); 
 	var button = document.createElement("button") ;
 	button.textContent = 'Enter'; 
+	button.classList.add("EnterAnswerButton");
 	var answerLine = document.createElement("h1")
 
 	exerciseBlock.appendChild(input) ;

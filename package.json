@@ -1,0 +1,19 @@
+{
+  "name": "elioruzan.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "SummaryPage.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EliorUzan/elioruzan.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EliorUzan/elioruzan.github.io/issues"
+  },
+  "homepage": "https://github.com/EliorUzan/elioruzan.github.io#readme"
+}

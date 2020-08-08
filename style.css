@@ -22,7 +22,36 @@ body {
     .main-nav {
         font-size: 0.5em ;
         padding: 0;
+        height: 110px;
+
      }
+
+     .navBtn {
+     	margin: 0px;
+     	padding-bottom: 0px;
+     	padding-top: 5px;
+
+     }
+
+     #navLogo {
+     	display: none;
+     }
+ }
+
+ @media only screen and (max-width: 300px) { 
+    .main-nav {
+        font-size: 0.25em ;
+        padding: 0;
+     }
+
+     #navLogo {
+     	display: none;
+     }
+ }
+
+
+
+
     }
 
 .push { 
@@ -30,8 +59,9 @@ body {
      }
 
 .navBtn {    
-    padding: 20px ;
-    line-height: 169.59px
+    padding-right: 30px ;
+    padding-top:20px;
+    line-height: 143.39px
     }
 
 .navBtn:hover {    
@@ -41,7 +71,7 @@ body {
 
 #navLogo {
     margin: 0;
-    line-height: 208.89px;
+    line-height: 143.39px;
     padding: 0;
 }
 
@@ -88,6 +118,10 @@ a:hover {
 
 }
 
+.EnterAnswerButton {
+	margin-left: 10px;
+
+}
 
 .red_container { 
     padding-top:100px;
@@ -111,7 +145,7 @@ a:hover {
 
 #landingLogo {
     max-width: 75vh;
-    max-width: 74vw;
+    max-width: 75vw;
 }
 
 .exercise_block {
