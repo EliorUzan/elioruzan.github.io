@@ -2,6 +2,30 @@ body {
     margin: auto 0; 
      }
 /*NAV*/
+
+
+
+@media only screen and (max-width: 450px) { 
+	#navBar {
+		display: none;
+	}
+    #thinScreenNavBar {
+    	display: inline-block;
+    	color: white;
+    	background: #F6575E;
+        padding: 0;
+     }
+
+     #navLogo {
+     	display: none;
+     }
+ }
+
+@media only screen and (min-width: 450px) {
+	#thinScreenNavBar {
+		display: none;
+	}
+}
 .sticky { 
     position: fixed;
     top: 0;
@@ -9,6 +33,7 @@ body {
      }
 .main-nav {
     display: flex;
+    flex-direction: row;
     list-style: none; 
     font-size: 0.7em ;
     margin: 0; 
@@ -29,13 +54,14 @@ body {
      .navBtn {
      	margin: 0px;
      	padding-bottom: 0px;
-     	padding-top: 5px;
+     	padding-top: 0.5rem;
+     	padding-right: 0.5rem
+     	line-height: 0.5rem;
 
      }
 
-     #navLogo {
-     	display: none;
-     }
+
+
  }
 
  @media only screen and (max-width: 300px) { 
@@ -61,7 +87,7 @@ body {
 .navBtn {    
     padding-right: 30px ;
     padding-top:20px;
-    line-height: 143.39px
+
     }
 
 .navBtn:hover {    
@@ -99,14 +125,17 @@ a:hover {
 @media only screen and (max-width: 800px) { 
     #resultsTable {
         font-size: 0.7em ;
-        padding-top: : 2px;
+        padding-top: : 0.7px;
+     }
+    #navLogo {
+     	display: none;
      }
     }
 
 @media only screen and (max-width: 600px) { 
     #exercise, #goodLuck , #resultsTable {
         font-size: 0.5em ;
-        padding-top: : 2px;
+        padding-top: : 0.5em;
      }
     }
 

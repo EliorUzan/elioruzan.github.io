@@ -38,7 +38,7 @@ function summaryPage(QandR) {
 	tryAgainButton.classList.add("btn");
 	tryAgainButton.classList.add("btn-success");
 	tryAgainButton.id = "tryAgainButton";
-	tryAgainButton.setAttribute('onclick', 'window.location.reload()') ; 
+	tryAgainButton.setAttribute('onclick', 'window.location.href = "https://elioruzan.github.io/#exercise_block";') ; 
 	exercise_block.appendChild(tryAgainButton); 
 
 
