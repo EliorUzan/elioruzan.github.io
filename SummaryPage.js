@@ -38,7 +38,7 @@ function summaryPage(QandR) {
 	tryAgainButton.classList.add("btn");
 	tryAgainButton.classList.add("btn-success");
 	tryAgainButton.id = "tryAgainButton";
-	tryAgainButton.setAttribute('onclick', 'window.location.href = "https://elioruzan.github.io/#exercise_block";') ; 
+	tryAgainButton.setAttribute('onclick', 'backToMentalMath()') ; 
 	exercise_block.appendChild(tryAgainButton); 
 
 
