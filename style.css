@@ -166,6 +166,21 @@ a:hover {
 
      }
 
+
+.red_container_info { 
+    /*padding-top:20px;*/
+    /*padding-bottom: 30px;*/
+    text-align: center;
+    flex-direction: row ;
+    display:inline-block;
+    width: 100%; 
+    align-items: center ;
+    justify-content: center ;
+    /*min-height: 50vh /* Means the the cover will be 50% of the viewport */
+    border-color: #F6575E;
+
+     }
+
 #logoMainContainer {
     margin-top: 100px;
     padding-top: 100px;
@@ -204,6 +219,11 @@ a:hover {
   text-transform: uppercase ;
   background-color: #FFFFFF;
   border-color: #FFFFFF;
+}
+
+.info {
+  margin-top: 20vh;
+
 }
 /*GRID*/
 .grid-wrapper {
@@ -244,6 +264,19 @@ footer {
     border:1px solid #bbb;
     transition: all 0.3s linear;
     border-color: #F6575E;
+}
+
+.zone_info {
+/*    padding:30px 50px;
+    margin:40px 60px;*/
+    cursor:pointer;
+    /*display:inline-block;*/
+    color:#ffffff;
+    /*font-size:2em;*/
+    border-radius:4px;
+    /*border:1px solid #bbb;*/
+    transition: all 0.3s linear;
+    /*border-color: #F6575E;*/
 }
 
 .zone:hover {
