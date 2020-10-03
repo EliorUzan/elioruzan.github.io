@@ -170,7 +170,9 @@ a:hover {
 .red_container_info { 
     /*padding-top:20px;*/
     /*padding-bottom: 30px;*/
-    text-align: center;
+    padding-right: 15vh;
+    padding-left: 15vh;
+    text-align: right;
     flex-direction: row ;
     display:inline-block;
     width: 100%; 
@@ -180,6 +182,11 @@ a:hover {
     border-color: #F6575E;
 
      }
+
+
+.title_info {
+  text-align: center;
+}
 
 #logoMainContainer {
     margin-top: 100px;
